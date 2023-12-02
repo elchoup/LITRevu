@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3>Vos posts</h3>
+    {% for post in posts %}
+        {% if post.title %}
+            {% with ticket=post %}
+                {% include 'review/partials/ticket_snippet.html' %}
+            {% endwith %}
+        {% else %}
+            {% with review=post %}
+                {% include 'review/partials/review_snippet.html'%}
+            {% endwith %}
+        {% endif %}
+    {% empty %}
+        <p>Vous n'avez rien posté pour le moment</p>
+    {% endfor %}
+{% endblock content %}

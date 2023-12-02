@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <h2>Inscrivez-vous maintenant</h2>
+        <button class= 'btn' onclick="window.location='signup';">S'inscrire</button>
+
+    <h2>Connectez-vous</h2>
+    <form method='post'>
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Se connecter</button>
+    </form>
+
+{% endblock content %}
+

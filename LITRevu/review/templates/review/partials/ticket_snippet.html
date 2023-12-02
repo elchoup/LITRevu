@@ -1,0 +1,24 @@
+<div class="ticket">
+    <div class="head-ticket">
+        {% if ticket.user == user %}
+            <h4> Vous avez demandé une critique</h4>
+        {% else %}
+            <h4> {{ ticket.user.username|capfirst }} à demandé une critique</h4>
+        {% endif %}
+        <p>{{ ticket.time_created }}</p>
+    </div>
+    <p>{{ ticket.title }}</p>
+    <p>{{ ticket.description }}</p>
+    {% if ticket.image %}
+        <img src="{{ ticket.image.url }}" alt="image du livre {{ ticket.title }}">
+    {% endif %}
+    {% if not ticket.review %}
+        {% if 'your-posts' not in request.path %}
+            <button onclick='window.location.href="{% url "create_review" ticket_id=ticket.id %}"'>Créer une critique</button>
+        {% endif %}
+    {% endif %}
+    {% if 'your-posts' in request.path %}
+        <button onclick='window.location.href="{% url "edit_ticket" ticket_id=ticket.id %}"'>Modifier</button>
+        <button onclick='window.location.href="{% url "edit_ticket" ticket_id=ticket.id %}"'>Supprimer</button>
+    {% endif %}
+</div>

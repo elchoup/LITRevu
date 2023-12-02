@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <div class="main_page">
+        <button class="main_btn" onclick='window.location.href="{% url "create_ticket" %}"'>Demander une critique</button>
+        <button class="main_btn" onclick='window.location.href="{% url "create_ticket_and_review" %}"'>Créer une critique</button>
+
+        <div class="grid_container">
+            {% for post in posts %}
+                {% if post.title %}
+                    {% with ticket=post %}
+                        {% include 'review/partials/ticket_snippet.html' %}
+                    {% endwith %}
+                {% else %}
+                    {% with review=post %}
+                        {% include 'review/partials/review_snippet.html'%}
+                    {% endwith %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock content %}

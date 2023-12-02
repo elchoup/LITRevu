@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Creer une critique</h2>
+    <div class="ticket_container">
+        <h4>Vous êtes en train de poster en réponse à:</h4>
+        <div class="ticket_spinnet">
+            {% include 'review/partials/ticket_snippet.html'%}
+        </div>
+    </div>
+
+    {% include 'review/partials/create_review_snippet.html' %}
+
+{% endblock content %}

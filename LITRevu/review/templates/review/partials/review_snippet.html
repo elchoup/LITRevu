@@ -1,0 +1,30 @@
+<div class='review'>
+    <div class="review_header">
+        {% if review.user == user %}
+            <h4>Vous avez publié une critique</h4>
+        {% else %}
+            <h4>{{ review.user.username }} a publié une critique</h4>
+        {% endif %}
+        <p>{{ review.time_created }}</p>
+    </div>
+    <div class="review_title">
+        <p>{{ review.headline }}</p>
+        <div>
+            {% for _ in "xxxxx" %}
+                {% if forloop.counter <= review.rating %}
+                    <i class="fa-solid fa-star"></i>
+                {% else %}
+                    <i class="fa-regular fa-star"></i>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <p>{{ review.body }}<p>
+    <div class='small_ticket'>
+        <h4>Ticket - {{ review.ticket.user.username|capfirst }}</h4>
+        <p>{{ review.ticket.title }}</p>
+        {% if review.ticket.image %}
+            <img src="{{ review.ticket.image.url }}" />
+        {% endif %}
+    </div>
+</div>

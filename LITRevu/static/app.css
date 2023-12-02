@@ -1,0 +1,285 @@
+:root{
+    --color-secondary: #ababab;
+}
+
+
+body{
+    margin: 0;
+    font-size: 18px;
+}
+
+
+h3{
+    font-size: 25px;
+}
+
+h4{
+    font-size: 20px;
+}
+
+#block_page{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    box-shadow: 2px 12px 13px -7px var(--color-secondary);
+    height: 80px;
+    
+}
+
+.titre{
+    margin: 0 auto
+}
+
+
+.main_page{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.main_btn{
+    height: 37px;
+    width: 40%;
+    margin-left: 30px;
+    background: whitesmoke;
+    border: 1px var(--color-secondary) solid;
+    box-shadow: inset -1px -1px var(--color-secondary);
+    border-radius: 5px;
+}
+
+.ticket{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    border: 1px var(--color-secondary) solid;
+    padding: 10px 15px 30px 15px;
+    box-shadow:-1px 0px 13px 2px var(--color-secondary);
+}
+
+.ticket button{
+    width: 20%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: 40px;
+    height: 30px;
+}
+
+.head-ticket{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.ticket img{
+    position: relative;
+    max-width: 200px;
+    max-height: 300px;
+    left: 60px;
+}
+
+
+.ticket_container{
+    margin-top: 60px;
+    padding: 20 20 80 20;
+    border:1px var(--color-secondary) solid ;
+    box-shadow: -1px 0px 13px 2px var(--color-secondary);
+}
+
+.ticket_container p{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#id_title{
+    margin-top: 5px;
+    height: 30px;
+}
+
+#id_description{
+    margin-top: 5px;
+    height: 150px;
+}
+
+#id_image{
+    margin-top: 5px;
+}
+
+
+.ticket_spinnet{
+    width: 80%;
+    margin: auto;
+}
+
+
+.review_container{
+    padding: 20 20 40 20;
+    margin-bottom: 50px;
+    border:1px var(--color-secondary) solid ;
+    box-shadow: -1px 0px 13px 2px var(--color-secondary);
+}
+
+
+.review_container form{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.review_container p{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#id_headline{
+    margin-top: 5px;
+    height: 30px;
+}
+
+#id_rating{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#id_body{
+    margin-top: 5px;
+    height: 150px;
+}
+
+.review_container button{
+    width: 20%;
+    margin-top: 30px;
+    margin-left: auto;
+    height: 30px;
+}
+
+.box_form{
+    width: 90%;
+    margin: auto;
+}
+
+.box_form button{
+    width: 20%;
+    margin-top: 30px;
+    margin-left: 80%;
+    height: 30px;
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    border: 1px var(--color-secondary) solid;
+    padding: 10px 15px 30px 15px;
+    box-shadow:-1px 0px 13px 2px var(--color-secondary);
+}
+
+
+.review_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review_title{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.small_ticket{
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--color-secondary) solid;
+    padding: 10px 15px 30px 15px;
+    box-shadow:-1px 0px 13px 2px var(--color-secondary);
+}
+
+
+.small_ticket img{
+    position: relative;
+    max-width: 200px;
+    max-height: 300px;
+    left: 60px;
+}
+
+
+.center{
+    text-align: center;
+    font-weight: lighter;
+}
+
+.search form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+
+}
+
+#id_followed_user{
+    width: 60vw;
+    height: 55px;
+    margin-right: 30px;
+    border: 1px var(--color-secondary) solid;
+}
+
+.btn{
+    height: 45px;
+    background-color: whitesmoke;
+    width: 10vw;
+    border: 1px var(--color-secondary) solid;
+}
+
+.user_follow{
+    list-style: none;
+}
+
+.user_follow_box{
+    width: 90%;
+    margin: auto;
+}
+
+.user_box{
+    display: flex;
+}
+
+.user{
+    border: 1px var(--color-secondary) solid;
+    height: 35px;
+    width: 68vw;
+    vertical-align: middle;
+    line-height: 35px;
+    padding-left: 5px;
+}
+
+.user_following{
+    border: 1px var(--color-secondary) solid;
+    height: 35px;
+    width: 78vw;
+    vertical-align: middle;
+    line-height: 35px;
+    padding-left: 5px;
+}
+
+.user_follow_btn{
+    background-color: whitesmoke;
+    border: 1px var(--color-secondary) solid;
+    width: 10vw;
+}
+
+

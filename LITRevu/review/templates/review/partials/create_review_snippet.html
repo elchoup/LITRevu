@@ -1,0 +1,8 @@
+<div class='review_container'>
+    <h3>Critique</h3>
+    <form method='post'>
+        {{ review_form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Envoyer</button>
+    </form>
+</div>

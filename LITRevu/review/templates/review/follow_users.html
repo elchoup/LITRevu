@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="search">
+        <h3 class="center">Suivre d'autres utilisateurs</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn"></input>
+        </form>
+    </div>
+
+    <div class="user_follow">
+        <h3 class="center">Abonnements</h3>
+        <div class="user_follow_box">
+            {% if following_users.exists %}
+                {% for user_follow in following_users %}
+                    <div class="user_box">
+                        <li class="user">{{user_follow.followed_user.username|capfirst}}</li>
+                        <input type='submit' value="Désabonner" class="user_follow_btn" id="{{user_follow.followed_user.username}}"></input>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Vous n'êtes abonnés à personne pour le moment</p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="user_follow">
+        <h3 class="center">Abonnés</h3>
+        <div class="user_follow_box">
+            {% if followed_users.exists %}
+                {% for user_follow in followed_users %}
+                    <li class="user_following">{{user_follow.user.username|capfirst}}</li>
+                {% endfor %}
+            {% else %}
+                <p>Personne ne vous suit pour le moment<p>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock content %}
+
+

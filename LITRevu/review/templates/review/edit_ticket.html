@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div>
+        <h3>Modifier le ticket</h3>
+        <form method='post' enctype='multipart/formdata'>
+            {{ edit_ticket_form.as_p }}
+            {% csrf_token %}
+            <input type='submit' value="Modifier"></input>
+        </form>
+    </div>
+
+{% endblock content %}
