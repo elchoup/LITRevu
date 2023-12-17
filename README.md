@@ -4,14 +4,14 @@ C'est une application développé en Python avec le framework Django.
 
 
 Installation du prrojet:
-    Utiliser la commande git clone: 
+    .Utiliser la commande git clone: 
         -git clone https://github.com/elchoup/LITRevu.git
-    Accedder au repertoire global: 
+    .Acceder au repertoire global: 
         -cd P9-DJANGO-LITREVU
-    Installer les dépendances:
+    .Installer les dépendances:
         -pip install -r requirements.txt
-    Acceder au repertoire du projet:
+    .Acceder au repertoire du projet:
         -cd LITReevu
-    Executer le projet:
+    .Executer le projet:
         -python manage.py runuserver
 
