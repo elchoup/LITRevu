@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3>Modifier votre critique</h3>
+    <form method='post'>
+        {{ edit_review_form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Modifier">
+    </form>
+
+{% endblock content %}
+
+

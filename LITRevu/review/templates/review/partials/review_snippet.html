@@ -24,7 +24,13 @@
         <h4>Ticket - {{ review.ticket.user.username|capfirst }}</h4>
         <p>{{ review.ticket.title }}</p>
         {% if review.ticket.image %}
-            <img src="{{ review.ticket.image.url }}" />
+            <img src="{{ review.ticket.image.url }}" alt="image du livre {{ review.ticket.title }}"/>
         {% endif %}
     </div>
+    {% if 'your-posts' in request.path %}
+        <div class="edit_button">
+            <button onclick='window.location.href="{% url "edit_review" review_id=review.id %}"'>Modifier</button>
+            <button onclick='window.location.href="{% url "delete_review" review_id=review.id %}"'>Supprimer</button>
+        </div>
+    {% endif %}
 </div>

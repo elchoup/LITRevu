@@ -1,11 +1,19 @@
 :root{
     --color-secondary: #ababab;
+    --color-terciary: #f5f5f5;
 }
 
 
 body{
     margin: 0;
     font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+
+h2{
+    text-align: center;
 }
 
 
@@ -22,6 +30,64 @@ h4{
     margin: auto;
 }
 
+.signup{
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--color-secondary) solid;
+    box-shadow: 2px 12px 13px -7px var(--color-secondary);
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.signup_form p{
+    margin-bottom: 40px;
+}
+
+.signup_form input{
+    height: 27px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    margin-right: 15px;
+    align-items: center;
+}
+
+.navbar a:hover{
+    font-weight: bold;
+}
+
+.logout{
+    border: none;
+    background-color: white;
+    color: black;
+    margin-right: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.logout:hover{
+    font-weight: bold;
+}
+
+.signup_form ul{
+    display: none;
+}
+
+.helptext{
+    display: none;
+}
 
 header{
     display: flex;
@@ -31,6 +97,33 @@ header{
     height: 80px;
     
 }
+
+.signin_page{
+    margin-top: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.signup_link{
+    text-align: center;
+}
+
+.signup_link h2{
+    margin-bottom: 60px;
+}
+
+.signin{
+    text-align: center;
+}
+
+.signin h2{
+    margin-bottom: 60px;
+}
+
+.signin input{
+    height: 35px;
+}
+
 
 .titre{
     margin: 0 auto
@@ -44,6 +137,14 @@ header{
     margin-bottom: 70px;
 }
 
+
+.main_page_btn{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
 .main_btn{
     height: 37px;
     width: 40%;
@@ -52,7 +153,14 @@ header{
     border: 1px var(--color-secondary) solid;
     box-shadow: inset -1px -1px var(--color-secondary);
     border-radius: 5px;
+    cursor: pointer;
 }
+
+
+.main_btn:hover{
+    background: rgb(190, 189, 189);
+}
+
 
 .ticket{
     display: flex;
@@ -61,6 +169,7 @@ header{
     border: 1px var(--color-secondary) solid;
     padding: 10px 15px 30px 15px;
     box-shadow:-1px 0px 13px 2px var(--color-secondary);
+    background-color: var(--color-terciary);
 }
 
 .ticket button{
@@ -69,6 +178,7 @@ header{
     margin-left: auto;
     margin-right: 40px;
     height: 30px;
+    cursor: pointer;
 }
 
 .head-ticket{
@@ -90,6 +200,9 @@ header{
     padding: 20 20 80 20;
     border:1px var(--color-secondary) solid ;
     box-shadow: -1px 0px 13px 2px var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-terciary);
 }
 
 .ticket_container p{
@@ -118,12 +231,21 @@ header{
     margin: auto;
 }
 
+.head_ticket_btn{
+    width: 15%;
+    margin-top: 50px;
+    margin-left: 80%;
+    height: 35px;
+    cursor: pointer;
+}
+
 
 .review_container{
     padding: 20 20 40 20;
     margin-bottom: 50px;
     border:1px var(--color-secondary) solid ;
     box-shadow: -1px 0px 13px 2px var(--color-secondary);
+    background-color: var(--color-terciary);
 }
 
 
@@ -163,6 +285,7 @@ header{
     margin-top: 30px;
     margin-left: auto;
     height: 30px;
+    cursor: pointer;
 }
 
 .box_form{
@@ -184,6 +307,7 @@ header{
     border: 1px var(--color-secondary) solid;
     padding: 10px 15px 30px 15px;
     box-shadow:-1px 0px 13px 2px var(--color-secondary);
+    background-color: var(--color-terciary);
 }
 
 
@@ -239,10 +363,11 @@ header{
 }
 
 .btn{
-    height: 45px;
+    height: 35px;
     background-color: whitesmoke;
     width: 10vw;
     border: 1px var(--color-secondary) solid;
+    cursor: pointer;
 }
 
 .user_follow{
@@ -265,21 +390,39 @@ header{
     vertical-align: middle;
     line-height: 35px;
     padding-left: 5px;
+    box-shadow:-1px 0px 13px 2px var(--color-secondary);
+    
 }
 
 .user_following{
     border: 1px var(--color-secondary) solid;
     height: 35px;
-    width: 78vw;
     vertical-align: middle;
     line-height: 35px;
     padding-left: 5px;
+    box-shadow:-1px 0px 13px 2px var(--color-secondary);
+    
 }
 
 .user_follow_btn{
     background-color: whitesmoke;
     border: 1px var(--color-secondary) solid;
     width: 10vw;
+    height: 37px;
+    cursor: pointer;
 }
 
+.edit_button{
+    margin-left: auto;
+    width: 30%;
+    display: flex;
+}
+.edit_button button{
+    width: 45%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: 40px;
+    height: 30px;
+    cursor: pointer;
+}
 

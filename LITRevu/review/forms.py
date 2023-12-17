@@ -3,10 +3,10 @@ from django import forms
 from . import models
 
 
-
 class TicketForm(forms.ModelForm):
-    edit_ticket_form = forms.BooleanField(widget=forms.HiddenInput, initial=True)
-    
+    edit_ticket_form = forms.BooleanField(widget=forms.HiddenInput,
+                                          initial=True)
+
     class Meta:
         model = models.Ticket
         fields = ['title', 'description', 'image']
@@ -15,7 +15,7 @@ class TicketForm(forms.ModelForm):
             'description': 'Description',
             'image': 'Image'
         }
-        
+
 
 class DeleteForm(forms.Form):
     delete_form = forms.BooleanField(widget=forms.HiddenInput, initial=True)
@@ -45,26 +45,6 @@ class ReviewForm(forms.ModelForm):
             'rating': 'Note',
             'body': 'Commentaire'
         }
-        
-        
-
-
-
-# class FollowUsersForm(forms.ModelForm):
-#     followed_user = forms.CharField(
-#         widget=forms.TextInput(attrs={'placeholder': "Nom d'utilisateur"}),
-#         label=''
-#     )
-
-#     class Meta:
-#         model = UserFollow
-#         fields = ['followed_user']
-
-
-
-
-
-
 
 
 class FollowUsersForm(forms.Form):

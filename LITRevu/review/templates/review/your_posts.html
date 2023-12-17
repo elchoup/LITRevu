@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3>Vos posts</h3>
+    <h2>Vos posts</h2>
     {% for post in posts %}
         {% if post.title %}
             {% with ticket=post %}

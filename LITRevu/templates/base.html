@@ -4,17 +4,25 @@
         <title>LITRevu</title>
         <link rel="stylesheet" href={% static 'app.css' %}>
         <script src="https://kit.fontawesome.com/aa87178c32.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     </head>
     <body>
         <header>
             <h1 class='titre'>LITRevu</h1>
             {% if user.is_authenticated %}
-                <nav>
+                <nav class="navbar">
                     <a href="{% url 'home' %}">Flux</a>
                     <a href="{% url 'your_posts' %}">Posts</a>
                     <a href="{% url 'users_follow' %}">Abonnements</a>
-                    <a href="{% url 'logout' %}">Se deconnecter</a>
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="logout">Déconnexion</button>
+                    </form>
+                    
                 </nav>
             {% endif %}
         </header>

@@ -17,7 +17,10 @@
                 {% for user_follow in following_users %}
                     <div class="user_box">
                         <li class="user">{{user_follow.followed_user.username|capfirst}}</li>
-                        <input type='submit' value="Désabonner" class="user_follow_btn" id="{{user_follow.followed_user.username}}"></input>
+                        <form method="post" action="{% url 'unfollow_user' user_follow.followed_user.id %}" onsubmit="return confirm('Voulez vous vraiment supprimer cet abonnement ?')">
+                            {% csrf_token %}
+                            <button type='submit' class="user_follow_btn" >Se désabonner</button>
+                        </form>
                     </div>
                 {% endfor %}
             {% else %}
@@ -37,7 +40,26 @@
             {% endif %}
         </div>
     </div>
+    {% comment %} <script>
+        $(document).ready(function () {
+            $('.user_follow_btn').click(function () {
+                var username = $(this).attr('id');
+                var unfollowUrl = $(this).data('unfollow-url')
+                $.ajax({
+                    url: unfollowUrl,
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data.message)
+                    },
+                    error: function (error) {
+                        console.log('Erreur lors de la desinscription')
+                    }
+                });
+            });
+            
+        });
+    </script> {% endcomment %}
 
 {% endblock content %}
-
 

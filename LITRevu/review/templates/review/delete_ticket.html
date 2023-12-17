@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3>Suppression du ticket</h3>
+    <form method="post">
+        {{ delete_ticket_form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Supprimer">
+    </form>
+
+{% endblock content %}

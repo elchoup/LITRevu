@@ -13,6 +13,6 @@ def signup_form(request):
             user = form.save()
             login(request, user)
             return redirect(settings.LOGIN_URL)
+
     return render(request,
                   'authentication/signup.html', context={'form': form})
-            

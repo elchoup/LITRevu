@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <p>Etes vous sûr de vouloir supprimer votre critique ?</p>
+    <form method='post'>
+        {{ delete_review_form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Supprimer">
+    </form>
+
+{% endblock content %}
