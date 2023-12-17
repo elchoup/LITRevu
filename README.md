@@ -9,9 +9,6 @@ Installation du prrojet:
 
         . git clone https://github.com/elchoup/LITRevu.git
 
-    -Acceder au repertoire global: 
-
-        . cd P9-DJANGO-LITREVU
     -Création d'un environement virtuel:
 
         . python -m venv env
@@ -29,6 +26,6 @@ Installation du prrojet:
         . cd LITReevu
 
     -Executer le projet:
-    
+
         . python manage.py runuserver
 
