@@ -17,15 +17,19 @@ Installation du prrojet:
 
         . env\scripts\activate
 
+    -Acceder au premier repertoire du projet:
+
+        .cd LITRevu
+
     -Installer les dépendances:
 
         . pip install -r requirements.txt
+    
+    -Acceder au second repertoire du projet:
 
-    -Acceder au repertoire du projet:
-
-        . cd LITReevu
+        .cd LITrevu
 
     -Executer le projet:
 
-        . python manage.py runuserver
+        . python manage.py runserver
 
